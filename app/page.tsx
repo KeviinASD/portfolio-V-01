@@ -112,14 +112,10 @@ function HomePage() {
               </div>
             </div>
 
-            <div className="flex flex-1 ">
-              <div className="w-[95%] md:w-[80%] h-[80vh] md:h-[60vh] mx-auto my-auto md:flex gap-6">
-                {/* IMAGE */}
-                <div className="md:w-[40%] relative">
-                  <img src="./yo.jpg" alt="Kevin Rivas" className="object-cover h-full"/>
-                </div>
+            <div className="flex flex-1">
+              <div className="w-[95%] md:w-[80%] lg:w-[60%] mx-auto items-center mb-[10vh] md:flex gap-6">
                 {/* CONTENIDO */}
-                <div className="md:w-[60%]">
+                <div className="">
                   {/* INFORMACION */}
                   <div className="border-b border-black pb-8 space-y-4">
                     <h1 className="font-bold text-lg">Who am I?</h1>
@@ -142,8 +138,31 @@ function HomePage() {
             </div>
           </section>
 
-          <section className="panel w-[100vw]">
-            <h1>Otro contenido</h1>
+          <section className="panel w-[100vw] relative box-content">
+            <h1 className="absolute top-0 left-20 text-[8vh] font-semibold">Skills</h1>
+            <div className="w-full pl-20 flex justify-center">
+              <h1 className="text-4xl text-center font-extralight my-[10vh]">
+                Collaborate with brands and agencies <br/>
+                to create impactful results.
+              </h1>
+            </div>
+            <div className="w-full pl-20 flex mt-[10vh]">
+              {/* CAGUITA */}
+              <div className="flex-1 grid grid-cols-4 gap-4 text-center px-10">
+                <div className="">
+                  Servicio 1
+                </div>
+                <div>
+                  Servicio 2
+                </div>
+                <div>
+                  Servicio 3
+                </div>
+                <div>
+                  Servicio 4
+                </div>
+              </div>
+            </div>
           </section>
         </div>
       </div>
