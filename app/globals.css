@@ -2,20 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+    @apply bg-[#F9FAFB] text-[#1a1a1a];
+}
+
+
+.close-buttton {
+    @apply before:bg-[#1a1a1a] before:h-[2px] before:w-full before:block before:content-[''] before:absolute before:left-[50%] before:top-[50%] before:rotate-45 before:translate-x-[-50%] before:translate-y-[-50%]
+}
+
+.close-buttton {
+    @apply after:bg-[#1a1a1a] after:h-[2px] after:w-full after:block after:content-[''] after:absolute after:left-[50%] after:top-[50%] after:-rotate-45 after:translate-x-[-50%] after:translate-y-[-50%]
+}
+
+.hidden-site {
+    pointer-events: none;
 }

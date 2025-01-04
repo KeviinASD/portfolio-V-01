@@ -1,101 +1,122 @@
+"use client";
+import { useRef, useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 
-export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+function HomePage() {
+  const container = useRef<HTMLDivElement>(null);
+  const animationFrameRef = useRef<number | null>(null); // Para manejar `requestAnimationFrame`
+  const currentScrollRef = useRef(0); // Valor actual animado
+  const [targetScroll, setTargetScroll] = useState(0); // Valor objetivo
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  // Limitar el desplazamiento para no sobrepasar los bordes
+  const clampScroll = useCallback((value: number) => {
+    const maxScroll =
+      (container.current?.scrollWidth || 0) - window.innerWidth;
+    return Math.max(0, Math.min(value, maxScroll));
+  }, []);
+
+  // Animar el desplazamiento suavemente
+  const animateScroll = useCallback(() => {
+    const currentScroll = currentScrollRef.current;
+    const difference = targetScroll - currentScroll;
+    if (Math.abs(difference) < 0.5) {
+      currentScrollRef.current = targetScroll; // Detener en el objetivo
+    } else {
+      currentScrollRef.current += difference * 0.1; // Suavizar con interpolación
+    }
+
+    if (container.current) {
+      container.current.style.transform = `translate3d(-${currentScrollRef.current}px, 0, 0)`;
+    }
+
+    if (Math.abs(difference) >= 0.5) {
+      animationFrameRef.current = requestAnimationFrame(animateScroll); // Continuar animación
+    }
+  }, [targetScroll]);
+
+  // Actualizar objetivo de scroll al mover la rueda
+  const handleWheel = (e: any) => {
+    const newTarget = clampScroll(targetScroll + e.deltaY);
+    setTargetScroll(newTarget);
+  };
+
+  // Iniciar la animación cuando cambia el objetivo
+  useEffect(() => {
+    if (animationFrameRef.current) {
+      cancelAnimationFrame(animationFrameRef.current);
+    }
+    animationFrameRef.current = requestAnimationFrame(animateScroll);
+
+    return () => {
+      if (animationFrameRef.current) {
+        cancelAnimationFrame(animationFrameRef.current);
+      }
+    };
+  }, [animateScroll]);
+
+  return (
+    <>
+      <div
+        className="slider relative overflow-hidden w-full"
+        onWheel={handleWheel} // Manejar el desplazamiento horizontal
+      >
+        <div
+          className="flex w-[300vw] min-h-screen transition-transform ease-linear"
+          ref={container}
+        >
+          <section className="panel w-[100vw] bg-red-200 pl-20" style={{backgroundImage: 'url(fondo.png)', backgroundSize: 'cover', backgroundPosition: 'center'}}>
+            {/* DIV CENTRADO */}
+            <div className="text-white text-3xl h-full ml-[10rem] flex justify-center flex-col relative gap-4 w-fit">
+              {/* MY NAME */}
+              <h1 className="absolute top-[calc(3.33333vh)] text-3xl text-black bg-white py-2 px-4 font-extralight" style={{letterSpacing: '6px'}}> <span className="font-semibold">Kevin</span> Rivas</h1>
+              {/* TEXTO IMPORTANTE */}
+              <div className="pl-4 border-l-2 border-white">
+                <div className="space-y-2">
+                  <h1 className="">Hi There!</h1>
+                  <h1 className="font-semibold text-5xl">I am just a Developer</h1>
+                  <h1>I make the complex simple.</h1>
+                </div>
+                <div className="mt-6">
+                  <button className="bg-[#ea2845] text-xl py-2 px-4 rounded-sm">Contac me</button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section className="panel w-[100vw] px-10 pl-20">
+            <h1>Otra sección</h1>
+          </section>
+
+          <section className="panel w-[100vw] px-10 pl-20 bg-pink-400">
+            <h1>Otro contenido</h1>
+          </section>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </div>
+    </>
   );
 }
+
+export default HomePage;
+
+
+/* 
+
+const {contextSafe} = useGSAP({scope: container})
+
+const scrollHorizontal = contextSafe(() => {
+      let panels = gsap.utils.toArray('.panel');
+  
+      gsap.to(panels, {
+        xPercent: -100 * (panels.length - 1),
+        ease: 'none',
+        scrollTrigger: {
+          trigger: container.current,
+          pin: true,
+          scrub: 1,
+          snap: 1 / (panels.length - 1),
+          end: () => "+=" + container.current?.offsetWidth,
+        }
+      })
+    })
+
+*/
