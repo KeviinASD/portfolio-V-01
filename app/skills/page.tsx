@@ -2,6 +2,7 @@ import OndasAnimation from "@/src/components/OndasAnimation";
 
 
 export default function SkillsPage () {
+
   return (
     <>
     <section className="relative pl-20 h-screen overflow-hidden flex items-center justify-center">
