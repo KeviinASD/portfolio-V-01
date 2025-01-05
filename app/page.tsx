@@ -113,14 +113,14 @@ function HomePage() {
             </div>
 
             <div className="flex flex-1">
-              <div className="w-[95%] md:w-[80%] lg:w-[60%] mx-auto items-center mb-[10vh] md:flex gap-6">
+              <div className="w-[90%] md:w-[80%] lg:w-[70%] mx-auto items-center mb-[10vh] flex gap-6">
                 {/* CONTENIDO */}
                 <div className="">
                   {/* INFORMACION */}
-                  <div className="border-b border-black pb-8 space-y-4">
+                  <div className="border-b-2 pb-8 space-y-4">
                     <h1 className="font-bold text-lg">Who am I?</h1>
                     <p className="font-extralight text-[5vh] " style={{lineHeight: '1.1'}}>I'm Kevin Rivas, a Software Ingeniere</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore dolorem aut et odit amet consequuntur nulla a esse aliquid illo eum quo voluptas quibusdam corporis repellendus ipsam, distinctio voluptate expedita!  quibusdam corporis repellendus ipsam, distinctio voluptate expedita!</p>
+                    <p className="hidden md:block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore dolorem aut et odit amet consequuntur nulla a esse aliquid illo eum quo voluptas quibusdam corporis repellendus ipsam, distinctio voluptate expedita!  quibusdam corporis repellendus ipsam, distinctio voluptate expedita!</p>
                   </div>
                   {/* DATOS PERSONALES */}
                   <div className="grid grid-cols-2 gap-4 mt-8">
@@ -129,37 +129,48 @@ function HomePage() {
                       <p className="flex gap-4"><span className="font-semibold">Age:</span> 22</p>
                     </div>
                     <div className="spacey-2">
-                    <p className="flex gap-4"><span className="font-semibold">Estudios:</span> Ingenieria de Sistemas</p>
+                    <p className="flex gap-4"><span className="font-semibold text-nowrap">Estudios:</span>System Ingeniere</p>
                     <p className="flex gap-4"><span className="font-semibold">Email:</span> kevinabril093@gmail.com</p>
                     </div>
                   </div>
+
                 </div>
               </div>
             </div>
           </section>
 
           <section className="panel w-[100vw] relative box-content">
-            <h1 className="absolute top-0 left-20 text-[8vh] font-semibold">Skills</h1>
+            <h1 className="absolute top-0 left-20 text-[8vh] font-semibold">Technical skills</h1>
             <div className="w-full pl-20 flex justify-center">
-              <h1 className="text-4xl text-center font-extralight my-[10vh]">
+              <h1 className="text-4xl text-center font-extralight mt-[20vh] mb-[4vh] lg:mb-[20vh]">
                 Collaborate with brands and agencies <br/>
                 to create impactful results.
               </h1>
             </div>
-            <div className="w-full pl-20 flex mt-[10vh]">
+            <div className="w-full pl-20 flex">
               {/* CAGUITA */}
-              <div className="flex-1 grid grid-cols-4 gap-4 text-center px-10">
-                <div className="">
-                  Servicio 1
+              <div className="flex-1 grid grid-cols-2 lg:grid-cols-4 gap-4 px-10">
+                <div className="space-y-4">
+                  <h1 className="font-semibold">Frontend Development</h1>
+                  <p>I create modern, responsive, and user-friendly interfaces using the latest technologies.</p>
+                  {/* TECNOLOGIAS EN CVG */}
+                  <img src="https://skillicons.dev/icons?i=angular,react,next,tailwind" />
                 </div>
-                <div>
-                  Servicio 2
+                <div className="space-y-4">
+                  <h1 className="font-semibold">Backend Development</h1>
+                  <p>I develop robust server-side applications and APIs to support seamless data operations.</p>
+                  <img src="https://skillicons.dev/icons?i=express,nest,spring,django,laravel" />
+                  <img src="https://skillicons.dev/icons?i=mysql,mongodb,firebase" />
                 </div>
-                <div>
-                  Servicio 3
+                <div className="space-y-4">
+                  <h1 className="font-semibold">DevOps and Tools</h1>
+                  <p>I manage deployments, version control, and collaboration tools to streamline development.</p>
+                  <img src="https://skillicons.dev/icons?i=git,docker" />
                 </div>
-                <div>
-                  Servicio 4
+                <div className="space-y-4">
+                  <h1 className="font-semibold">Other Skills</h1>
+                  <p>I continuously learn and adapt to improve my problem-solving and technical expertise.</p>
+                  <img src="https://skillicons.dev/icons?i=figma,linux" />
                 </div>
               </div>
             </div>
@@ -171,26 +182,3 @@ function HomePage() {
 }
 
 export default HomePage;
-
-
-/* 
-
-const {contextSafe} = useGSAP({scope: container})
-
-const scrollHorizontal = contextSafe(() => {
-      let panels = gsap.utils.toArray('.panel');
-  
-      gsap.to(panels, {
-        xPercent: -100 * (panels.length - 1),
-        ease: 'none',
-        scrollTrigger: {
-          trigger: container.current,
-          pin: true,
-          scrub: 1,
-          snap: 1 / (panels.length - 1),
-          end: () => "+=" + container.current?.offsetWidth,
-        }
-      })
-    })
-
-*/
