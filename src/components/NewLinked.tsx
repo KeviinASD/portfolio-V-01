@@ -51,7 +51,7 @@ const NewLinked: React.FC<NavigationContextType> = ({title, href, selected, onCl
 
     return (
         <button ref={buttonRef} onClick={handleOnClick}
-            className={`${selected?'text-[#ccc] font-bold':`hover:before:opacity-100`} relative text-[30px] before:content-['->'] before:text-[30px] before:absolute before:left-0 before:top-0 before:translate-x-[-100%] before:opacity-0 before:transition-opacity before:duration-[0.4s] before:ease-in-out`}
+            className={`${selected?'text-[#ccc] font-bold':`hover:before:opacity-100`} relative text-[28px] before:content-['->'] before:text-[28px] before:absolute before:left-0 before:top-0 before:translate-x-[-100%] before:opacity-0 before:transition-opacity before:duration-[0.4s] before:ease-in-out`}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
         >

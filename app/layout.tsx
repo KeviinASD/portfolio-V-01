@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Manrope } from "next/font/google";
+import { Geist, Geist_Mono, Manrope, Cardo } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/src/components/Navbar";
 import { NavigationProvider } from "@/src/context/navigationContext";
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 const manrope = Manrope({
   style: "normal",
   subsets: ["latin"],
-  weight: ["200", "400", "600", "700"],
+  weight: ["200", "400", "600", "700", "800"],
 });
 
 export default function RootLayout({

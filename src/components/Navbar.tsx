@@ -95,7 +95,7 @@ function Navbar() {
   
   return (
     <>
-      <div className={`fixed top-0 left-0 w-20 h-full z-20 flex flex-col justify-center items-center`} ref={openNavBarButton}>
+      <div className={`fixed top-0 left-0 w-20 h-full z-[910] flex flex-col justify-center items-center`} ref={openNavBarButton}>
         <div className="space-y-2 cursor-pointer p-4" onClick={openNavBar}>
           <div className="w-1 h-1 bg-black rounded-full"></div>
           <div className="w-1 h-1 bg-black rounded-full"></div>
@@ -103,28 +103,28 @@ function Navbar() {
         </div>
       </div>
 
-      <nav className="fixed top-0 left-0 h-full z-10 navcito hidden-site" ref={container}>
+      <nav className="fixed top-0 left-0 h-full z-[900] navcito hidden-site" ref={container}>
         {/* ANIMATION CARGA */}
         <div className="siteNavi_bg absolute left-0 top-0 w-full h-full border-r-2 bg-[#fff] -z-10" style={{transform: 'translate(-100%, 0%) translate(80px, 0px)'}}></div>
 
         {/* BUTTON */}
-        <div className="closeButton opacity-0 absolute top-[calc(3.333333vh-3px)] left-[calc(100%-5.3333vh)] cursor-pointer z-30"
+        <div className="closeButton opacity-0 absolute top-[calc(3.333333vh-3px)] left-[calc(100%-5.3333vh)] cursor-pointer z-[920]"
           onClick={closeNavBar}
         >
           <div className="close-buttton w-7 h-7 relative"></div>
         </div>
         <ul className="siteNavi_pages opacity-0 flex flex-col h-[50%] px-[6.6vw] lg:px-[3.3vw] justify-end items-start" style={{transform: 'translate(-20px, 0px)'}}>
           <li className="">
-            <NewLinked title="INFO" href="/" selected={currentPage === PagesEnum.HOME} onClick={handleOnClick}/>
+            <NewLinked title="ABOUT" href="/" selected={currentPage === PagesEnum.ABOUT} onClick={handleOnClick}/>
           </li>
-          <li className="mt-[2vh]">
+          <li className="mt-[1vh]">
             <NewLinked title="PROJECTS" href="/projects" selected={currentPage === PagesEnum.PROJECTS} onClick={handleOnClick}/>
           </li>
-          <li className="mt-[2vh]">
+          <li className="mt-[1vh]">
             <NewLinked title="CONCURSOS" href="/concursos" selected={currentPage === PagesEnum.CONCURSOS} onClick={handleOnClick}/>
           </li>
-          <li className="mt-[2vh]">
-            <NewLinked title="SKILLS" href="/skills" selected={currentPage === PagesEnum.SKILLS} onClick={handleOnClick}/>
+          <li className="mt-[1vh]">
+            <NewLinked title="CONTACT" href="/contact" selected={currentPage === PagesEnum.CONTACT} onClick={handleOnClick}/>
           </li>
         </ul>
 

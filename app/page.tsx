@@ -79,11 +79,11 @@ function HomePage() {
           className="flex w-[300vw] min-h-screen transition-transform ease-linear"
           ref={container}
         >
-          <section className="panel w-[100vw] pl-20" style={{backgroundImage: 'url(fondo.png)', backgroundSize: 'cover', backgroundPosition: 'center'}}>
+          <section className="panel panel-first w-[100vw] pl-20 bg-[#020a13] z-30 relative" style={{/* backgroundImage: 'url(fondo.png)',  */backgroundSize: 'cover', backgroundPosition: 'center'}}>
             {/* DIV CENTRADO */}
             <div className="text-white text-3xl h-full ml-[10rem] flex justify-center flex-col relative gap-4 w-fit">
               {/* MY NAME */}
-              <h1 className="absolute top-[calc(3.33333vh)] text-3xl text-black bg-white py-2 px-4 font-extralight" style={{letterSpacing: '6px'}}> <span className="font-semibold">Kevin</span> Rivas</h1>
+              <h1 className="my-name absolute top-[calc(3.33333vh)] text-3xl text-black bg-white py-2 px-4 font-extralight text-nowrap" style={{letterSpacing: '6px'}}> <span className="font-semibold">Kevin</span> Rivas</h1>
               {/* TEXTO IMPORTANTE */}
               <div className="pl-4 border-l-2 border-white">
                 <div className="space-y-2">
@@ -91,19 +91,16 @@ function HomePage() {
                   <h1 className="font-semibold text-5xl">I am just a Developer</h1>
                   <h1>I make the complex simple.</h1>
                 </div>
-                <div className="mt-6">
-                  <button className="bg-[#ea2845] text-xl py-2 px-4 rounded-sm">Contac me</button>
-                </div>
               </div>
             </div>
           </section>
 
-          <section className="panel w-screen relative h-screen flex">
+          <section className="panel w-screen relative h-screen flex z-30">
             {/* ANIMACION */}
             <OndasAnimation className="absolute top-[30%] left-0 w-screen -z-20 transition-transform ease-linear" canvasRef={canvasRef}/>
             <div className="inline-flex items-center justify-center h-full w-80 relative">
-              <h1 className="absolute top-0 left-10 text-[8vh] font-semibold">Myself</h1>
-              <div className="ml-10 pl-5 border-l-2 border-black">
+              <h1 className="absolute top-0 left-10 text-[8vh] font-semibold text-secondary">Myself</h1>
+              <div className="ml-10 pl-5 border-l-2 border-secondary">
                 <p>
                 You can view my artworks here.
                 <br />
@@ -112,42 +109,46 @@ function HomePage() {
               </div>
             </div>
 
-            <div className="flex flex-1">
-              <div className="w-[90%] md:w-[80%] lg:w-[70%] mx-auto items-center mb-[10vh] flex gap-6">
-                {/* CONTENIDO */}
-                <div className="">
-                  {/* INFORMACION */}
-                  <div className="border-b-2 pb-8 space-y-4">
-                    <h1 className="font-bold text-lg">Who am I?</h1>
-                    <p className="font-extralight text-[5vh] " style={{lineHeight: '1.1'}}>I'm Kevin Rivas, a Software Ingeniere</p>
-                    <p className="hidden md:block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore dolorem aut et odit amet consequuntur nulla a esse aliquid illo eum quo voluptas quibusdam corporis repellendus ipsam, distinctio voluptate expedita!  quibusdam corporis repellendus ipsam, distinctio voluptate expedita!</p>
-                  </div>
-                  {/* DATOS PERSONALES */}
-                  <div className="grid grid-cols-2 gap-4 mt-8">
-                    <div className="spacey-2">
-                      <p className="flex gap-4"><span className="font-semibold">Name:</span> Kevin Rivas</p>
-                      <p className="flex gap-4"><span className="font-semibold">Age:</span> 22</p>
-                    </div>
-                    <div className="spacey-2">
-                    <p className="flex gap-4"><span className="font-semibold text-nowrap">Estudios:</span>System Ingeniere</p>
-                    <p className="flex gap-4"><span className="font-semibold">Email:</span> kevinabril093@gmail.com</p>
-                    </div>
-                  </div>
+            <div className="flex flex-1 lg:px-[10vw] ">
+              <div>
+                    <h1 className="font-bold text-secondary mt-[15vh] text-5xl">About Me.</h1>
+                    <article className="space-y-2 mt-[5vh]">
+                      <ul className="timeline pl-4 relative">
+                        <li className="space-y-4 mt-2 mb-7">
+                          <div className="flex justify-between">
+                            <a target="_blank" href="https://github.com/KeviinASD" className="font-bold text-lg hover:border-accent-gray border-b border-transparent transition">Engineering</a>
+                            <a target="_blank" href="https://github.com/KeviinASD" className="font-bold text-lg border-b border-accent-gray">View GitHub</a>
+                          </div>
+                          <p className="hidden md:block">
+                            The power of first impressions cannot be underestimated, and the gateway to capitalizing on them lies in exceptional website design. An outstanding website transcends mere aesthetics and extends its influence to encompass seamless functionality and user-friendly navigation. Drawing upon my expertise as a seasoned programmer, I possess the unique ability to tackle intricate technical challenges while crafting websites that exude sleekness and visual allure. Moreover, my extensive knowledge of recognized technical standards is complemented by my proficiency in modern building practices, ensuring that every aspect of your website is finely tuned to perfection.
+                          </p>
+                        </li>
+                        <li className="space-y-4 mt-2 mb-4">
+                          <div className="flex justify-between">
+                          <a target="_blank" href="https://github.com/KeviinASD" className="font-bold text-lg hover:border-accent-gray border-b border-transparent transition">Engineering</a>
+                          <a target="_blank" href="https://github.com/KeviinASD" className="font-bold text-lg border-b border-accent-gray">View GitHub</a>
+                          </div>
+                          <p className="hidden md:block">
+                            The power of first impressions cannot be underestimated, and the gateway to capitalizing on them lies in exceptional website design. An outstanding website transcends mere aesthetics and extends its influence to encompass seamless functionality and user-friendly navigation. Drawing upon my expertise as a seasoned programmer, I possess the unique ability to tackle intricate technical challenges while crafting websites that exude sleekness and visual allure. Moreover, my extensive knowledge of recognized technical standards is complemented by
+                          </p>
+                        </li>
+                        
+                      </ul>
 
-                </div>
+                    </article>
               </div>
             </div>
           </section>
 
-          <section className="panel w-[100vw] relative box-content">
-            <h1 className="absolute top-0 left-20 text-[8vh] font-semibold">Technical skills</h1>
-            <div className="w-full pl-20 flex justify-center">
+          <section className="panel w-[100vw] relative box-content z-30">
+            <h1 className="absolute top-0 text-[8vh] font-semibold">Technical skills</h1>
+            <div className="w-full flex justify-center">
               <h1 className="text-4xl text-center font-extralight mt-[20vh] mb-[4vh] lg:mb-[20vh]">
                 Collaborate with brands and agencies <br/>
                 to create impactful results.
               </h1>
             </div>
-            <div className="w-full pl-20 flex">
+            <div className="w-full flex">
               {/* CAGUITA */}
               <div className="flex-1 grid grid-cols-2 lg:grid-cols-4 gap-4 px-10">
                 <div className="space-y-4">

@@ -1,9 +1,9 @@
 
 export enum PagesEnum {
-    HOME = "",
+    ABOUT = "",
     PROJECTS = "projects",
     SKILLS = "skills",
-    ANIMATION = "animation",
+    CONTACT = "contact",
     CONCURSOS = "concursos"
 }
 

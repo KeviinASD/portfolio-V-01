@@ -13,6 +13,8 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
         primary: "#ea2845",
+        secondary: "#1b1b1b",
+        "accent-gray": "#6c757d",
       },
     },
   },
