@@ -52,7 +52,7 @@ const OndasAnimation = ({className, canvasRef}: OndasAnimationProps) => {
       }
 
       wave.increment += frequency;
-      ctx.strokeStyle = "rgba(0, 0, 0, 0.15)";
+      ctx.strokeStyle = "rgba(0, 0, 0, 0.1)";
       ctx.stroke();
     })
 

@@ -3,7 +3,6 @@
 import { useGSAP } from "@gsap/react";
 import { useRef, useState } from "react";
 import gsap from "gsap";
-import LinkedAnimation from "@/src/components/LinkedAnimation";
 
 function AnimastionPage() {
   const container = useRef(null);
@@ -22,7 +21,7 @@ function AnimastionPage() {
   })
 
   return (
-    <section ref={container} className='flex h-screen items-center justify-center'>
+    <section ref={container} className='flex h-screen items-center justify-center relative'>
         <h1 className="font-bold text-3xl">Animation Page</h1>
     </section>
   )

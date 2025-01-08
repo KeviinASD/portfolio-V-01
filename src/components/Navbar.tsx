@@ -118,13 +118,13 @@ function Navbar() {
             <NewLinked title="ABOUT" href="/" selected={currentPage === PagesEnum.ABOUT} onClick={handleOnClick}/>
           </li>
           <li className="mt-[1vh]">
+            <NewLinked title="SKILLS" href="/skills" selected={currentPage === PagesEnum.SKILLS} onClick={handleOnClick}/>
+          </li>
+          <li className="mt-[1vh]">
             <NewLinked title="PROJECTS" href="/projects" selected={currentPage === PagesEnum.PROJECTS} onClick={handleOnClick}/>
           </li>
           <li className="mt-[1vh]">
             <NewLinked title="CONCURSOS" href="/concursos" selected={currentPage === PagesEnum.CONCURSOS} onClick={handleOnClick}/>
-          </li>
-          <li className="mt-[1vh]">
-            <NewLinked title="CONTACT" href="/contact" selected={currentPage === PagesEnum.CONTACT} onClick={handleOnClick}/>
           </li>
         </ul>
 

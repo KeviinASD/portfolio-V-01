@@ -76,20 +76,32 @@ function HomePage() {
         onWheel={handleWheel} // Manejar el desplazamiento horizontal
       >
         <div
-          className="flex w-[300vw] min-h-screen transition-transform ease-linear"
+          className="flex w-[200vw] min-h-screen transition-transform ease-linear"
           ref={container}
         >
           <section className="panel panel-first w-[100vw] pl-20 bg-[#020a13] z-30 relative" style={{/* backgroundImage: 'url(fondo.png)',  */backgroundSize: 'cover', backgroundPosition: 'center'}}>
             {/* DIV CENTRADO */}
-            <div className="text-white text-3xl h-full ml-[10rem] flex justify-center flex-col relative gap-4 w-fit">
+            <div className="max-w-[540px] md:max-w-[960px] px-4 mx-auto h-full">
               {/* MY NAME */}
-              <h1 className="my-name absolute top-[calc(3.33333vh)] text-3xl text-black bg-white py-2 px-4 font-extralight text-nowrap" style={{letterSpacing: '6px'}}> <span className="font-semibold">Kevin</span> Rivas</h1>
-              {/* TEXTO IMPORTANTE */}
-              <div className="pl-4 border-l-2 border-white">
-                <div className="space-y-2">
-                  <h1 className="">Hi There!</h1>
-                  <h1 className="font-semibold text-5xl">I am just a Developer</h1>
-                  <h1>I make the complex simple.</h1>
+              <h1 className="my-name absolute top-[calc(3.33333vh)] left-[calc(80px+3.33333vh)] text-3xl text-black bg-white py-2 px-4 font-extralight text-nowrap" style={{letterSpacing: '6px'}}>I'm Kevin<span className="font-semibold"> Rivas</span></h1>
+              <div className="text-white flex items-center justify-center h-full">
+                <div className="w-10/12 space-y-6">
+                  <h1 className="text-4xl font-bold">I'M SOFTWARE INGENIERE</h1>
+                  <p className="text-[#c6c6c6]">Your friendly neighborhood frontend developer, UX architect, and JavaScript engineer. I spend my days (and often nights) painting the Internet canvas with Projects and lines of code, turning zeroes and ones into immersive, interactive experiences,</p>
+                  <p className="text-[#c6c6c6]">Bona fide photochromic Lens enthusiast - sunlight or indoors, I've got it covered. I tread the path of minimalism, finding beauty in simplicity and order. When I'm not crafting beautiful web experiences, you can find me reading Articles or swaying to the rhythm of Pop Music & Jazz, losing myself in the captivating flow of melodies. anyways you can Contact Me</p>
+                  <br />
+                  <p className="text-[#c6c6c6]">
+                    Scroll to See More About Me
+                    <svg className="forward-left fill-white inline-block" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fillRule="evenodd" clipRule="evenodd"><path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"></path></svg>
+                  </p>
+                  <div className="flex">
+                    <a href="https://www.linkedin.com/in/keviinrivas/" target="_blank" className="">
+                      <svg className="fill-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"></path></svg>
+                    </a>
+                    <a href="https://github.com/KeviinASD" target="_blank" className="ml-4">
+                      <svg className="fill-white " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -97,7 +109,7 @@ function HomePage() {
 
           <section className="panel w-screen relative h-screen flex z-30">
             {/* ANIMACION */}
-            <OndasAnimation className="absolute top-[30%] left-0 w-screen -z-20 transition-transform ease-linear" canvasRef={canvasRef}/>
+            {/* <OndasAnimation className="absolute top-[30%] left-0 w-screen -z-20 transition-transform ease-linear" canvasRef={canvasRef}/> */}
             <div className="inline-flex items-center justify-center h-full w-80 relative">
               <h1 className="absolute top-0 left-10 text-[8vh] font-semibold text-secondary">Myself</h1>
               <div className="ml-10 pl-5 border-l-2 border-secondary">
@@ -119,8 +131,8 @@ function HomePage() {
                             <a target="_blank" href="https://github.com/KeviinASD" className="font-bold text-lg hover:border-accent-gray border-b border-transparent transition">Engineering</a>
                             <a target="_blank" href="https://github.com/KeviinASD" className="font-bold text-lg border-b border-accent-gray">View GitHub</a>
                           </div>
-                          <p className="hidden md:block">
-                            The power of first impressions cannot be underestimated, and the gateway to capitalizing on them lies in exceptional website design. An outstanding website transcends mere aesthetics and extends its influence to encompass seamless functionality and user-friendly navigation. Drawing upon my expertise as a seasoned programmer, I possess the unique ability to tackle intricate technical challenges while crafting websites that exude sleekness and visual allure. Moreover, my extensive knowledge of recognized technical standards is complemented by my proficiency in modern building practices, ensuring that every aspect of your website is finely tuned to perfection.
+                          <p className="block">
+                            The power of first impressions cannot be underestimated, and the gateway to capitalizing on them lies in exceptional website design. An outstanding website transcends mere aesthetics and extends its influence to encompass
                           </p>
                         </li>
                         <li className="space-y-4 mt-2 mb-4">
@@ -128,51 +140,12 @@ function HomePage() {
                           <a target="_blank" href="https://github.com/KeviinASD" className="font-bold text-lg hover:border-accent-gray border-b border-transparent transition">Engineering</a>
                           <a target="_blank" href="https://github.com/KeviinASD" className="font-bold text-lg border-b border-accent-gray">View GitHub</a>
                           </div>
-                          <p className="hidden md:block">
-                            The power of first impressions cannot be underestimated, and the gateway to capitalizing on them lies in exceptional website design. An outstanding website transcends mere aesthetics and extends its influence to encompass seamless functionality and user-friendly navigation. Drawing upon my expertise as a seasoned programmer, I possess the unique ability to tackle intricate technical challenges while crafting websites that exude sleekness and visual allure. Moreover, my extensive knowledge of recognized technical standards is complemented by
+                          <p className="block">
+                            The power of first impressions cannot be underestimated, and the gateway to capitalizing on them lies in exceptional website design. An outstanding website transcends mere aesthetics and extends its influence to encompass
                           </p>
                         </li>
-                        
                       </ul>
-
                     </article>
-              </div>
-            </div>
-          </section>
-
-          <section className="panel w-[100vw] relative box-content z-30">
-            <h1 className="absolute top-0 text-[8vh] font-semibold">Technical skills</h1>
-            <div className="w-full flex justify-center">
-              <h1 className="text-4xl text-center font-extralight mt-[20vh] mb-[4vh] lg:mb-[20vh]">
-                Collaborate with brands and agencies <br/>
-                to create impactful results.
-              </h1>
-            </div>
-            <div className="w-full flex">
-              {/* CAGUITA */}
-              <div className="flex-1 grid grid-cols-2 lg:grid-cols-4 gap-4 px-10">
-                <div className="space-y-4">
-                  <h1 className="font-semibold">Frontend Development</h1>
-                  <p>I create modern, responsive, and user-friendly interfaces using the latest technologies.</p>
-                  {/* TECNOLOGIAS EN CVG */}
-                  <img src="https://skillicons.dev/icons?i=angular,react,next,tailwind" />
-                </div>
-                <div className="space-y-4">
-                  <h1 className="font-semibold">Backend Development</h1>
-                  <p>I develop robust server-side applications and APIs to support seamless data operations.</p>
-                  <img src="https://skillicons.dev/icons?i=express,nest,spring,django,laravel" />
-                  <img src="https://skillicons.dev/icons?i=mysql,mongodb,firebase" />
-                </div>
-                <div className="space-y-4">
-                  <h1 className="font-semibold">DevOps and Tools</h1>
-                  <p>I manage deployments, version control, and collaboration tools to streamline development.</p>
-                  <img src="https://skillicons.dev/icons?i=git,docker" />
-                </div>
-                <div className="space-y-4">
-                  <h1 className="font-semibold">Other Skills</h1>
-                  <p>I continuously learn and adapt to improve my problem-solving and technical expertise.</p>
-                  <img src="https://skillicons.dev/icons?i=figma,linux" />
-                </div>
               </div>
             </div>
           </section>

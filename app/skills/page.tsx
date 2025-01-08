@@ -1,20 +1,20 @@
 import OndasAnimation from "@/src/components/OndasAnimation";
 
 
-export default function SkillsPage () {
+function SkillsPage () {
 
   return (
     <>
-    <section className="panel w-[100vw] relative box-content">
+    <section className="panel-first panel w-[100vw] relative box-content">
       <OndasAnimation className="absolute left-0 -z-10 w-screen top-[40%]"/>
-            <h1 className="absolute top-0 left-20 text-[8vh] font-semibold">Technical skills</h1>
-            <div className="w-full pl-20 flex justify-center">
-              <h1 className="text-4xl text-center font-extralight mt-[20vh] mb-[4vh] lg:mb-[20vh]">
+            <h1 className="absolute top-[calc(3.3333vh)] left-[calc(3.3333vh+80px)] text-[5vh] font-extrabold">Technical skills</h1>
+            <div className="hidden w-full pl-20 md:flex justify-center">
+              <h1 className="text-4xl text-center mt-[20vh] mb-[4vh] lg:mb-[20vh]">
                 Collaborate with brands and agencies <br/>
                 to create impactful results.
               </h1>
             </div>
-            <div className="w-full pl-20 flex">
+            <div className="pt-[20vh] md:pt-0 w-full pl-20 flex">
               {/* CAGUITA */}
               <div className="flex-1 grid grid-cols-2 lg:grid-cols-4 gap-4 px-10">
                 <div className="space-y-4">
@@ -45,3 +45,19 @@ export default function SkillsPage () {
     </>
   )
 }
+
+function SkillsPrueba() {
+  return (<>
+    <section className="panel-first pl-20">
+      <div className="container mx-auto px-4 flex flex-col items-center justify-center">
+        {/* CONTENIDO */}
+          <div className="md:w-5/6 w-full">
+            <h1 className="mt-20 mb-10 text-5xl font-extrabold">Skills</h1>
+          </div>
+      </div>
+    </section>
+  </>)
+}
+
+
+export default SkillsPrueba;

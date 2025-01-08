@@ -142,3 +142,20 @@ aside.fadeInLeft {
     animation: fadeLeft 0.5s;
     animation-fill-mode: both;
 }
+
+@keyframes forward {
+    0% {
+        margin-left: 1rem;
+    }
+    100% {
+        margin-left: 2rem;
+    }
+}
+
+.forward-left {
+    margin-left: 1rem;
+    animation-name: forward;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
