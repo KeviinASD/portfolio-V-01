@@ -23,7 +23,7 @@ const CardProject: React.FC<CardProjectProps> = ({ project }) => {
       className="absolute object-cover left-0 top-0 h-full w-full rounded-xl overflow-hidden"
     />
 
-    <div className="z-[10] space-y-3 md:opacity-0 md:group-hover:opacity-100 md:group-hover:-translate-y-[10%] md:transition-all md:duration-300 md:ease-in-out">
+    <div className="z-[10] space-y-3 md:opacity-0 md:group-hover:opacity-100 md:group-hover:-translate-y-[10%] md:transition-all md:duration-500 md:ease-in-out">
       <h1 className="text-white font-extrabold text-3xl">{name}</h1>
       <p className="text-[#d5d5d5]">
         {description}

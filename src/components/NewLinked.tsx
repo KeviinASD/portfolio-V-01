@@ -3,7 +3,14 @@
 import { useGSAP } from "@gsap/react";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef } from "react";
+import { Manrope } from "next/font/google";
 import { gsap } from "gsap"
+
+const manrope = Manrope({
+    style: "normal",
+    subsets: ["latin"],
+    weight: ["200", "400", "600", "700", "800"],
+  });
 
 interface NavigationContextType {
     title: string,
@@ -51,7 +58,7 @@ const NewLinked: React.FC<NavigationContextType> = ({title, href, selected, onCl
 
     return (
         <button ref={buttonRef} onClick={handleOnClick}
-            className={`${selected?'text-[#ccc] font-bold':`hover:before:opacity-100`} relative text-[28px] before:content-['->'] before:text-[28px] before:absolute before:left-0 before:top-0 before:translate-x-[-100%] before:opacity-0 before:transition-opacity before:duration-[0.4s] before:ease-in-out`}
+            className={`${selected?'text-[#ccc] font-bold':`hover:before:opacity-100`} relative text-[28px] before:content-['->'] before:text-[28px] before:absolute before:left-0 before:top-0 before:translate-x-[-100%] before:opacity-0 before:transition-opacity before:duration-[0.4s] before:ease-in-out ${manrope.className}`}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
         >

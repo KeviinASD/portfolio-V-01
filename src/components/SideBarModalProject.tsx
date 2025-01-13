@@ -17,7 +17,7 @@ const SideBarModalProject: React.FC<SideBarModalProjectProps> = ({project, setIs
                 style={{background: "rgba(0, 0, 0, 0.8)"}}
                 onClick={backToProjects}
             ></div>
-            <aside className="w-full md:w-[34rem] z-[999999] fixed top-0 right-0 bg-[#fffdfc] h-full fadeInLeft transition-all duration-300 linear">
+            <aside className="w-full md:w-[34rem] z-[999999] fixed top-0 right-0 bg-[#fffdfc] h-full fadeInLeft transition-all duration-500 linear">
                 <div className="p-8 max-h-full overflow-y-scroll">
                     <div className="flex justify-between py-4 border-b items-center">
                         <button className="" onClick={backToProjects}>
