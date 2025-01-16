@@ -8,7 +8,7 @@ function SkillsPage() {
   
   return (<>
     <section className="panel-first pl-20">
-      <div className="container flex flex-col items-center px-5 py-[60px] md:px-10 md:py-[80px] md:w-10/12 mx-auto">
+      <div className="container flex flex-col items-center px-5 py-[60px] md:px-10 md:py-[80px] md:w-4/5 mx-auto">
         {/* TEXTO */}
         <div className="flex flex-col items-center gap-4 w-full md:w-[500px]">
           <h1 className="text-5xl font-extrabold text-center">Technical skills</h1>

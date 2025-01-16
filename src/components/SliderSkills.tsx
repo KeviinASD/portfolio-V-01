@@ -36,7 +36,7 @@ const SliderSkills: React.FC<{}> = () => {
 
 
     return (
-        <section className="md:max-w-[1200px] w-full mt-10 flex gap-8 md:gap-12 relative">
+        <section className="md:max-w-[1200px] w-full flex gap-8 md:gap-12 relative">
           <div className="w-1/2 flex flex-col items-center justify-center sticky top-0">
             {skills.map((skill, index) => (
                 <div className="h-screen min-h-screen sticky top-0 flex items-center" key={index}>

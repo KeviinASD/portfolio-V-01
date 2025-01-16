@@ -123,9 +123,9 @@ function Navbar() {
           <li className="mt-[1vh]">
             <NewLinked title="PROJECTS" href="/projects" selected={currentPage === PagesEnum.PROJECTS} onClick={handleOnClick}/>
           </li>
-          <li className="mt-[1vh]">
+          {/* <li className="mt-[1vh]">
             <NewLinked title="CONCURSOS" href="/concursos" selected={currentPage === PagesEnum.CONCURSOS} onClick={handleOnClick}/>
-          </li>
+          </li> */}
         </ul>
 
         <ul className="siteNavi_pages opacity-0 flex flex-col h-[50%] px-[6.6vw] lg:px-[3.3vw] justify-end items-start pb-[6.6vw] lg:pb-[3.3vw]" style={{transform: 'translate(-20px, 0px)'}}>

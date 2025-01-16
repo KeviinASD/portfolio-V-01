@@ -8,7 +8,7 @@ const ProjectsPage = () => {
         <section className="pl-20 panel-first">
             <div className="container mx-auto px-4 flex flex-col items-center justify-center">
                 {/* CONTENIDO */}
-                <div className="md:w-5/6 w-full">
+                <div className="md:w-4/5 w-full">
                     <h1 className="mt-20 mb-10 text-5xl font-extrabold">Projects.</h1>
                     {/*  */}
                     <nav className="flex md:justify-center gap-10">

@@ -43,10 +43,18 @@ const SideBarModalProject: React.FC<SideBarModalProjectProps> = ({project, setIs
                                 ))}
                             </p>
                         </div>
-                        <div>
-                            <h1 className="mb-2 font-bold text-lg">Website</h1>
-                            <a href={website}>{website}</a>
-                        </div>
+                        { project.website && (
+                            <div>
+                                <h1 className="mb-2 font-bold text-lg">Website</h1>
+                                <a href={website}>{website}</a>
+                            </div>
+                        )}
+                        { project.github && (
+                            <div>
+                                <h1 className="mb-2 font-bold text-lg">Github</h1>
+                                <a className="font-sans text-[#545454]" href={project.github}>{project.github}</a>
+                            </div>
+                        )}
                     </div>
                 </div>
             </aside>
