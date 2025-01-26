@@ -175,3 +175,22 @@ aside.fadeInLeft {
     animation: fadeBottom 0.5s forwards;
     animation-fill-mode: both;
 }
+
+
+.home::before {
+    
+    content: '';
+    height: 150%;
+    width: 150%;
+    background-image: linear-gradient(currentColor 1px, transparent 1px),
+      linear-gradient(to right, currentColor 1px, transparent 1px);
+    background-size: 25% 25%;
+    color: rgba(31, 31, 31, 0.09);
+    position: fixed;
+    z-index: -10;
+    left: -25%;
+    top: -25%;
+
+    background-color: transparent;
+    transition: all 0.5s linear;
+}
