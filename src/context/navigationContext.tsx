@@ -12,12 +12,12 @@ const NavigationContext = createContext<NavigationContextType | null>(null)
 
 export const NavigationProvider = ({children}: Readonly<{children: React.ReactNode}>) => {
     const path = usePathname()
-    const [currentPage, setCurrentPage] = useState<PagesEnum>(PagesEnum.HOME)
+    const [currentPage, setCurrentPage] = useState<PagesEnum>(PagesEnum.ABOUT)
 
     useEffect(() => {
         const firstPath = path.split('/')[1] || ""
         const page = Object.values(PagesEnum).find(page => page === firstPath)
-        setCurrentPage(page? page : PagesEnum.HOME)
+        setCurrentPage(page? page : PagesEnum.ABOUT)
     }, [path])
 
     return (

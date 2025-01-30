@@ -14,6 +14,7 @@ export default {
         foreground: "var(--foreground)",
         primary: "#ea2845",
         secondary: "#1b1b1b",
+        "accent-black": "#2F2F2F",
         "accent-gray": "#6c757d", 
       },
     },

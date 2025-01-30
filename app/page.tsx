@@ -3,7 +3,7 @@ import { useRef, useState, useEffect, useCallback } from "react";
 import {Mulish} from "next/font/google";
 import Image from "next/image";
 import OndasAnimation from "@/src/components/OndasAnimation";
-import Home from "@/src/layouts/Home";
+import Home from "@/src/ui/Home";
 
 const mulish = Mulish({
   style: "normal",
