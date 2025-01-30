@@ -1,7 +1,7 @@
 "use client"
 import React, { createContext, useContext, useEffect, useState } from "react"
 import { PagesEnum } from "../enums/pages";
-import { useParams, useSearchParams, usePathname } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 type NavigationContextType = {
   currentPage: PagesEnum;

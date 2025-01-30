@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Skill } from "../interfaces/skills";
 
 
 interface SkillProps {

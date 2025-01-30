@@ -1,5 +1,5 @@
 "use client"
-import { useRef, useEffect, useState, useCallback } from 'react';
+import { useRef, useEffect, useCallback } from 'react';
 
 type Wave = {
   amplitude: number;
@@ -10,13 +10,10 @@ type Wave = {
 
 interface OndasAnimationProps {
   className?: string;
-  canvasRef?: React.RefObject<HTMLCanvasElement | null>; 
+  canvasRef: React.RefObject<HTMLCanvasElement | null>; 
 }
 
 const OndasAnimation = ({className, canvasRef}: OndasAnimationProps) => {
-  if (!canvasRef) {
-    canvasRef = useRef<HTMLCanvasElement>(null);
-  }
   const waves = useRef<Wave[]>([
     { amplitude: 100, frequency: 0.009, length: 0.001, increment: 0.01},
     { amplitude: 100, frequency: 0.009, length: 0.002, increment: 0.01},

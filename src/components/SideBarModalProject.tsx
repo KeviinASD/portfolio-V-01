@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Project } from "../interfaces/projects";
 
 interface SideBarModalProjectProps {
@@ -30,7 +31,7 @@ const SideBarModalProject: React.FC<SideBarModalProjectProps> = ({project, setIs
                             <h1 className="mb-2 font-bold text-xl">{name}</h1>
                             <p className="text-sm text-[#545454]">{description}</p>
                         </div>
-                        <img src={image} alt="" className="rounded-lg"/>
+                        <Image src={image} alt="" className="rounded-lg"/>
                         <div>
                             <h1 className="mb-2 font-bold text-lg">About</h1>
                             <p className="text-sm text-[#545454]">{about}</p>

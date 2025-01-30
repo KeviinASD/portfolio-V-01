@@ -1,11 +1,11 @@
 "use client"
 import { useGSAP } from "@gsap/react"
-import { useEffect, useRef, useState } from "react"
+import { useRef } from "react"
 import { gsap } from "gsap";
 import { useNavigation } from "../context/navigationContext";
 import { PagesEnum } from "../enums/pages";
 import NewLinked from "./NewLinked";
-
+import Link from "next/link";
 
 function Navbar() {
 
@@ -130,25 +130,25 @@ function Navbar() {
 
         <ul className="siteNavi_pages opacity-0 flex flex-col h-[50%] px-[6.6vw] lg:px-[3.3vw] justify-end items-start pb-[6.6vw] lg:pb-[3.3vw]" style={{transform: 'translate(-20px, 0px)'}}>
           <li>
-            <a href="/" className="text-[20px]">Contact</a>
+            <Link href="/" className="text-[20px]">Contact</Link>
             <p className="mt-2">Copy Email</p>
           </li>
           <li className="mt-[4vh]">
-            <a href="/" className="text-[20px]">SNS</a>
+            <Link href="/" className="text-[20px]">SNS</Link>
             <div className="grid mt-2 grid-flow-col gap-[.5rem] content-start">
-              <a href="/" className="">Instagram</a>
+              <Link href="/" className="">Instagram</Link>
               <span>/</span>
-              <a href="/" className="">Twitter</a>
+              <Link href="/" className="">Twitter</Link>
               <span>/</span>
-              <a href="/" className="">LinkedIn</a>
+              <Link href="/" className="">LinkedIn</Link>
             </div>
           </li>
           <li className="mt-[4vh]">
-            <a href="/" className="text-[20px]">Store</a>
+            <Link href="/" className="text-[20px]">Store</Link>
             <div className="grid mt-2 grid-flow-col gap-[.5rem] content-start">
-              <a href="/" className="">Linkedin</a>
+              <Link href="/" className="">Linkedin</Link>
               <span>/</span>
-              <a href="/" className="">GitHub</a>
+              <Link href="/" className="">GitHub</Link>
             </div>
           </li>
         </ul>

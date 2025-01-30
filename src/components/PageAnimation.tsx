@@ -1,11 +1,8 @@
 "use client"
 
 import { useGSAP } from "@gsap/react"
-import { useEffect, useRef, useState } from "react"
+import { useRef, useState } from "react"
 import { gsap } from "gsap"
-import { useRouter } from "next/router"
-import { useNavigation } from "@/src/context/navigationContext"
-import { PagesEnum } from "../enums/pages"
 
 function TemplateInitialAnimation() {
   const containerTemplate = useRef<HTMLDivElement>(null)

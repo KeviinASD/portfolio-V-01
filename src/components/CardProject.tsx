@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Project } from "../interfaces/projects";
 import SideBarModalProject from "./SideBarModalProject";
+import Image from "next/image";
 
 interface CardProjectProps {
     project: Project;
@@ -17,7 +18,7 @@ const CardProject: React.FC<CardProjectProps> = ({ project }) => {
   <div className="card-project h-[400px] flex relative p-10 items-end rounded-lg mb-6 overflow-hidden bg-[#f4f1ee] md:after:opacity-30 group md:after:hover:opacity-100 "
     onClick={() => setIsOpen((prev) => !prev)}
   >
-    <img
+    <Image 
       src={image}
       alt={description}
       className="absolute object-cover left-0 top-0 h-full w-full rounded-xl overflow-hidden"
