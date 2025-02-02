@@ -31,7 +31,9 @@ const SideBarModalProject: React.FC<SideBarModalProjectProps> = ({project, setIs
                             <h1 className="mb-2 font-bold text-xl">{name}</h1>
                             <p className="text-sm text-[#545454]">{description}</p>
                         </div>
-                        <Image src={image} alt="" className="rounded-lg"/>
+                        <div className="w-full h-[20rem] relative">
+                            <Image src={image} fill alt="" className="rounded-lg object-cover"/>
+                        </div>
                         <div>
                             <h1 className="mb-2 font-bold text-lg">About</h1>
                             <p className="text-sm text-[#545454]">{about}</p>

@@ -21,6 +21,9 @@ const CardProject: React.FC<CardProjectProps> = ({ project }) => {
     <Image 
       src={image}
       alt={description}
+      width={400}
+      height={400}
+      priority={false}
       className="absolute object-cover left-0 top-0 h-full w-full rounded-xl overflow-hidden"
     />
 
